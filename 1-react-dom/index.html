@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <title>react-dom</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script>
+        //REACT 
+        const postItem = React.createElement('div',
+            {
+                class: 'post-item'
+            },
+            React.createElement('h2', {
+                title: 'React Dom'
+            },
+                'React dom'),
+            React.createElement('p', {
+
+            }, 'P - react dom')
+        )
+        //GET ROOT ELEMENT
+        const root = document.getElementById('root')
+        //REACT DOM
+        ReactDOM.render(postItem, root);
+        console.log(postItem);
+    </script>
+</body>
+
+</html>

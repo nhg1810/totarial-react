@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!-- babel dùng để chuyển đổi thành jsx -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>JSX</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- JSX LÀ GÌ -->
+    <!-- JAVA SCRIPT XML -->
+    <!-- ĐẶC TRƯNG CỦA XML LÀ CẤU TRÚC THẺ MỞ VÀ THẺ ĐỐNG -->
+    <!-- khi chạy ứng dụng, nó sẽ tìm các script có type = babel và chạy các script đó, và jsx sẽ tự động chuyển element thành các react element -->
+    <script type="text/babel">
+        const ul = <ul>
+            <li>Hello world</li>
+        </ul>
+
+        ReactDOM.render(ul, document.getElementById('root'));
+    </script>
+</body>
+
+</html>

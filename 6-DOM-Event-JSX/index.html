@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Dom event</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const arr_item = [{
+            image: '1',
+            title: 'Hải Dương',
+            content: 'Đẹp trai'
+        },
+        {
+            image: '2',
+            title: 'Nữ oanh',
+            content: 'Đẹp gái'
+        }
+        ]
+        // tương tự như js thuần thì reactjs cx có các hàm xử lí sự kiện
+
+        const Component = (props) => {
+            return (
+                <div>
+                    <image src={props.image} />
+                    <h3>{props.title}</h3>
+                    <p>{props.content}</p>
+                    <button onClick={() => {
+                        alert(Math.random())
+                    }}>Click me</button>
+                </div>
+
+
+            );
+        }
+
+
+        const App = () => {
+            return (
+                <div>
+                    <h1>Đây là một ví dụ về props</h1>
+
+                    {
+                        arr_item.map((item, index) => {
+                            return (<Component
+                                image={item.image}
+                                title={item.title}
+                                content={item.content} />
+
+                            )
+
+                        })
+                    }
+
+                </div>
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
